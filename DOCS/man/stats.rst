@@ -27,7 +27,6 @@ stats:
 3      Input cache stats
 4      Active key bindings (scroll)
 5      Selected Tracks Info (scroll)
-6      Sync stats
 0      Internal stuff (scroll)
 ====   ==================
 
@@ -70,8 +69,6 @@ Configurable Options
     Default: 4
 ``key_page_5``
     Default: 5
-``key_page_6``
-    Default: 6
 ``key_page_0``
     Default: 0
 ``key_exit``
@@ -104,7 +101,7 @@ Configurable Options
     Default: 5 (minimum: 1)
 
     How many seconds the mean and the standard deviation of the sync values
-    cover (toggling). The graphs of the sync page show the same time.
+    cover (toggling).
 
 ``persistent_overlay``
     Default: no
@@ -279,17 +276,6 @@ sequences can be disabled by adding ``-`` before ``yes``, i.e.
 
 Like with ``--input-test``, the list includes bindings from ``input.conf`` and
 from user scripts. Use ``--no-config`` to list only built-in bindings.
-
-Sync stats page
-~~~~~~~~~~~~~~~
-
-Shows the A/V difference and the presentation delay.
-
-When toggled, each value is shown as its mean over the last ``sync_window``
-seconds, followed by the standard deviation. Marks on the upper edge of a graph
-show the frames that were dropped (red), delayed (orange) or mistimed (yellow).
-
-This page is always shown as with ``persistent_overlay=yes``.
 
 Internal stuff page
 ~~~~~~~~~~~~~~~~~~~

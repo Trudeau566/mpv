@@ -1,2 +1,1 @@
 add `stats-sync_window` script-opt
-add a page 6 to stats.lua with sync graphs
