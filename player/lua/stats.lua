@@ -317,12 +317,6 @@ local function append_property(s, prop, attr, excluded, cached)
     return append(s, ret, attr)
 end
 
-local function append_sync(s, prop, attr)
-    local value = mp.get_property_number(prop)
-    attr.suffix = " ms"
-    return append(s, value and format("%+.2f", value * 1e3), attr)
-end
-
 local function sorted_keys(t, comp_fn)
     local keys = {}
     for k,_ in pairs(t) do
@@ -955,7 +949,7 @@ local function add_video_out(s)
                     no_prefix_markup=true, nl="", indent=" "}, nil, true)
     append(s, mp.get_property_native("current-gpu-context"),
            {prefix="Context:", nl="", indent=o.prefix_sep .. o.prefix_sep})
-    append_sync(s, "avsync", {prefix="A-V:"})
+    append_property(s, "avsync", {prefix="A-V:"})
     append_fps(s, "display-fps", "estimated-display-fps")
     if append_property(s, "decoder-frame-drop-count",
                        {prefix="Dropped Frames:", suffix=" (decoder)"}) then
