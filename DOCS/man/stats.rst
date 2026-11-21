@@ -284,8 +284,7 @@ Sync stats page
 ~~~~~~~~~~~~~~~
 
 Shows the A/V difference and the presentation delay. With display sync it also
-shows the speed corrections of video and audio, the vsync ratio and the vsync
-jitter.
+shows the speed corrections of video and audio.
 
 When toggled, each value is shown as its mean over the last ``sync_window``
 seconds, followed by the standard deviation. Marks on the upper edge of a graph
