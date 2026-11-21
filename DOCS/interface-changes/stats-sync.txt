@@ -1,1 +1,0 @@
-add `stats-sync_window` script-opt

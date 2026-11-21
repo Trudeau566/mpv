@@ -97,12 +97,6 @@ Configurable Options
 
     How long it takes to refresh the displayed stats in seconds (toggling).
 
-``sync_window``
-    Default: 5 (minimum: 1)
-
-    How many seconds the mean and the standard deviation of the sync values
-    cover (toggling).
-
 ``persistent_overlay``
     Default: no
 
